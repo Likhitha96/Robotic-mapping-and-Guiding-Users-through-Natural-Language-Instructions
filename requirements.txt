@@ -5,4 +5,5 @@ tqdm
 six
 pandas
 pytorch-nlp
+nltk
 torch

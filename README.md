@@ -38,16 +38,18 @@ Run the images through a MaskRCNN simulator trained on indoor images
 # Execution
 cd code
 
-python preprocessing/mapping.py
+python3 preprocessing/mapping.py
 
 For training,
-python examples/sample.py
+python3 examples/sample.py
 
 For inference,
-python examples/sample.py --load_checkpoint epoch_number
+python3 examples/sample.py --load_checkpoint epoch_number
 
-#Dockerising application
+# Dockerising application
 cd code
+
 docker build --rm -t project_v2 .
+
 docker run -it  -v $PWD:/app project_v2
 

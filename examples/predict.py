@@ -9,14 +9,15 @@ ROOT=os.getcwd()
 from seq2seq.evaluator import Predictor
 from seq2seq.util.checkpoint import Checkpoint
 
-INPUT_FILE = "/data/triple-data/test/test_1.csv"
+INPUT_FILE = "/data/triple-data/test/test.csv"
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', action='store', dest='input',
                     help='Input file', default='INPUT_FILE')
 opt = parser.parse_args()
 
-checkpoint_path = os.path.join(opt.expt_dir, Checkpoint.CHECKPOINT_DIR_NAME, opt.load_checkpoint)
+checkpoint_path = os.path.join(ROOT, "experiment/checkpoints/72")
 checkpoint = Checkpoint.load(checkpoint_path)
 seq2seq = checkpoint.model
 input_vocab = checkpoint.input_vocab
@@ -24,7 +25,7 @@ output_vocab = checkpoint.output_vocab
 
 predictor = Predictor(seq2seq, input_vocab, output_vocab)
 
-data = pd.read_csv( ROOT+INPUT_FILE,delimiter=",",header=0)
+data = pd.read_csv(ROOT+INPUT_FILE,delimiter=",",header=0)
 pred=[]
 def sentence_gen(sen):
     #sen[max_len,batch_size]
