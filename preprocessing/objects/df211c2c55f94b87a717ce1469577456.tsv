@@ -1,0 +1,10 @@
+sno	number_of_objects	objects	roi
+7.jpg	0	[]	[]
+3.jpg	1	['tv']	[[ 73 536 207 640]]
+1.jpg	0	[]	[]
+5.jpg	0	[]	[]
+6.jpg	0	[]	[]
+2.jpg	1	['chair']	[[176 266 232 333]]
+0.jpg	0	[]	[]
+4.jpg	2	['bed', 'door-stuff']	"[[159  16 211 199]
+ [ 28 427 302 491]]"

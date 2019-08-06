@@ -1,0 +1,8 @@
+numpy
+torchtext
+dill
+tqdm
+six
+pandas
+pytorch-nlp
+torch

@@ -1,0 +1,32 @@
+sno	number_of_objects	objects	roi
+7.jpg	9	['chair', 'chair', 'chair', 'chair', 'chair', 'dining table', 'window-other', 'window-other', 'chair']	"[[371 488 479 638]
+ [306 180 331 211]
+ [308 454 470 529]
+ [316 232 347 257]
+ [276 182 336 255]
+ [315 498 385 639]
+ [182 529 295 638]
+ [163 405 304 475]
+ [301 517 319 571]]"
+3.jpg	1	['refrigerator']	[[ 72 391 458 610]]
+2.jpg	4	['door-stuff', 'sink', 'door-stuff', 'door-stuff']	"[[133 148 474 307]
+ [306 255 324 294]
+ [ 85   0 461  34]
+ [113  17 480 520]]"
+5.jpg	0	[]	[]
+0.jpg	8	['chair', 'chair', 'chair', 'dining table', 'chair', 'chair', 'chair', 'window-other']	"[[362 144 479 261]
+ [311 256 453 336]
+ [317 108 468 176]
+ [306 149 359 307]
+ [298 290 324 333]
+ [296 173 311 217]
+ [300 273 356 333]
+ [181  76 317 375]]"
+1.jpg	4	['door-stuff', 'sink', 'door-stuff', 'toilet']	"[[112 501 471 621]
+ [325 588 349 639]
+ [ 86 247 480 496]
+ [429 585 480 640]]"
+6.jpg	3	['chair', 'chair', 'chair']	"[[312 528 343 565]
+ [328 591 369 627]
+ [284 534 353 622]]"
+4.jpg	1	['refrigerator']	[[ 48   0 476 423]]

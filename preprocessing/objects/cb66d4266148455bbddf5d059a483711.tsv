@@ -1,0 +1,25 @@
+sno	number_of_objects	objects	roi
+5.jpg	3	['door-stuff', 'door-stuff', 'door-stuff']	"[[ 98 123 479 187]
+ [ 29 102 480 376]
+ [  0 330 478 563]]"
+1.jpg	6	['vase', 'vase', 'sink', 'bottle', 'mirror-stuff', 'cup']	"[[381 461 475 505]
+ [393 386 427 409]
+ [313 257 336 336]
+ [298 246 330 256]
+ [ 56 181 352 493]
+ [394 348 420 376]]"
+3.jpg	1	['sink']	[[344 148 381 233]]
+4.jpg	3	['door-stuff', 'door-stuff', 'door-stuff']	"[[ 66 242 480 541]
+ [101 469 473 521]
+ [ 30 183 456 281]]"
+7.jpg	2	['door-stuff', 'door-stuff']	"[[  7  34 480 394]
+ [ 69   3 480 135]]"
+0.jpg	2	['bottle', 'mirror-stuff']	"[[308 610 348 626]
+ [124 588 322 638]]"
+6.jpg	2	['chair', 'bed']	"[[285 264 471 393]
+ [255   8 463 167]]"
+2.jpg	5	['vase', 'sink', 'vase', 'potted plant', 'door-stuff']	"[[423  19 475  53]
+ [353 494 395 594]
+ [402 117 478 153]
+ [320   0 468  92]
+ [152 305 474 528]]"
