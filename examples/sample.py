@@ -1,8 +1,10 @@
+from __future__ import division
 import os
 import argparse
 import logging
 import time
 import torch
+from nltk.translate.bleu_score import sentence_bleu
 from torch.optim.lr_scheduler import StepLR
 import torchtext
 import pandas as pd
@@ -143,7 +145,7 @@ predictor = Predictor(seq2seq, input_vocab, output_vocab)
 pred_time = pred_start_time - time.time()
 print("Time taken for inference is",loading_time+pred_time)
 
-data = pd.read_csv( ROOT+"/data/triple-data/test/test_1.csv",delimiter=",",header=0)
+data = pd.read_csv( ROOT+"/data/triple-data/test/test.csv",delimiter=",",header=0)
 pred=[]
 def sentence_gen(sen):
     #sen[max_len,batch_size]
@@ -165,14 +167,20 @@ def sentence_gen(sen):
 
 for i in range(len(data)):
     seq_str = data.iloc[i]["src"]
+    #target_str = data.iloc[i]["tgt"]
     print(seq_str)
     seq = seq_str.strip().split()
     pred.append(predictor.predict(seq))
 
+
 print(pred)
+score =0
 pred_target= sentence_gen(pred)
 print(len(pred_target))
+for i in range(len(data)):
+    score += sentence_bleu(pred_target[i], data.iloc[i]["tgt"], weights=(1, 0, 0, 0))
+score = score/len(data)
 pred_target = pd.DataFrame(pred_target)
 
 pred_target.columns = ["pred"]
-pred_target.to_csv("final_gt_test2-21.csv",sep=",")
+pred_target.to_csv("output.csv",sep=",")
