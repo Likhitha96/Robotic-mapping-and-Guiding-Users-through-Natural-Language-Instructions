@@ -36,20 +36,25 @@ https://github.com/peteanderson80/Matterport3DSimulator
 Run the images through a MaskRCNN simulator trained on indoor images
 
 # Execution
+```
 cd code
 
 python3 preprocessing/mapping.py
-
+```
 For training,
+```
 python3 examples/sample.py
-
+```
 For inference,
+```
 python3 examples/sample.py --load_checkpoint epoch_number
-
+```
 # Dockerising application
+```
 cd code
 
 docker build --rm -t project_v2 .
 
 docker run -it  -v $PWD:/app project_v2
+```
 
